@@ -20,3 +20,15 @@ class Calculadora:
         for _ in range(20):  # 20 iteraciones para aproximación
             aproximacion = (aproximacion + x / aproximacion) / 2.0
         return aproximacion
+
+    def exponencial(self, x):
+        # Método aproximado para calcular e^x usando la serie de Taylor
+        n = 20  # Número de términos de la serie
+        resultado = 1
+        factorial = 1
+        potencia = 1
+        for i in range(1, n + 1):
+            factorial *= i
+            potencia *= x
+            resultado += potencia / factorial
+        return resultado

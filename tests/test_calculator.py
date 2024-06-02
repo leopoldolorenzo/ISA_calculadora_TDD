@@ -23,3 +23,10 @@ def test_raiz_cuadrada():
     calc = Calculadora()
     assert abs(calc.raiz_cuadrada(9) - 3) < 0.001
     assert abs(calc.raiz_cuadrada(2) - 1.414) < 0.001
+
+def test_exponencial():
+    calc = Calculadora()
+    assert abs(calc.exponencial(1) - 2.718) < 0.001
+    assert abs(calc.exponencial(0) - 1) < 0.001
+    assert abs(calc.exponencial(2) - 7.389) < 0.001
+    assert abs(calc.exponencial(-1) - 0.367) < 0.001    
