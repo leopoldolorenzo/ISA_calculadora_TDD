@@ -8,7 +8,7 @@ def test_sumar():
 def test_restar():
     calc = Calculadora()
     assert calc.restar(5, 2) == 3
-    
+
 def test_multiplicar():
     calc = Calculadora()
     assert calc.multiplicar(3, 2) == 6
@@ -18,3 +18,8 @@ def test_dividir():
     assert calc.dividir(6, 2) == 3
     with pytest.raises(ValueError):
         calc.dividir(6, 0)
+
+def test_raiz_cuadrada():
+    calc = Calculadora()
+    assert abs(calc.raiz_cuadrada(9) - 3) < 0.001
+    assert abs(calc.raiz_cuadrada(2) - 1.414) < 0.001
